@@ -1,0 +1,52 @@
+<div class="container-sm">
+    <table class="table table-borderless table-striped table-dark rounded-lg m-auto text-white" style="width: 350px">
+        <tbody>
+            <tr>
+                <td>Unique ID</td>
+                <td>:</td>
+                <td>
+                    <Input @value={{this.id}} class="form-control" />
+                </td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>:</td>
+                <td>
+                    <Input @value={{this.name}} class="form-control" />
+                </td>
+            </tr>
+            <tr>
+                <td>Image URL</td>
+                <td>:</td>
+                <td>
+                    <Input @value={{this.imgUrl}} class="form-control" />
+                </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>:</td>
+                <td>
+                    <Input @value={{this.email}} class="form-control" />
+                </td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td>:</td>
+                <td>
+                    <Input @value={{this.phone}} type='number' class="form-control" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="container d-flex justify-content-center my-2">
+        <input type="button" value="Done" class="btn btn-primary ml-5 px-5" {{on "click" this.submit}}>
+    </div>
+
+    <div class="alert alert-success" style="display: {{if this.success "block" "none"}}">
+        <strong>Success!</strong> Your data is successfully recorded.
+    </div>
+
+    <div class="alert alert-danger" style="display: {{if this.error "block" "none"}}">
+        <strong>Error!</strong> {{this.errorMsg}}.
+    </div>
+</div>

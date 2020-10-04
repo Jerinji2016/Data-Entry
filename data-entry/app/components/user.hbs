@@ -1,0 +1,38 @@
+<div class="card-xl row mx-auto my-3 bg-dark text-center text-white align-items-center container rounded-lg">
+    <img src={{@user.imgUrl}} alt="dp" class="rounded-circle col-sm-4 p-3">
+
+    <div class="col-sm-7 p-0">
+        <table class="table table-striped text-white m-0">
+            <thead>
+                <th>Attribute</th>
+                <th></th>
+                <th>Value</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ID</td>
+                    <td>:</td>
+                    <td>{{@user._id}}</td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td>:</td>
+                    <td>{{@user.name}}</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>:</td>
+                    <td>{{@user.email}}</td>
+                </tr>
+                <tr>
+                    <td>Phone</td>
+                    <td>:</td>
+                    <td>{{@user.phone}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-sm-1 p-2">
+        <button class="btn btn-danger">Delete</button>
+    </div>
+</div>
