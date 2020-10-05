@@ -9,11 +9,11 @@ from urllib.parse import parse_qs
 import json
 
 
+
 #   =========================================================
 #   Add User to Database
 async def addData(request):
     data = (await request.body()).decode()
-    data = data[5:]
     user = json.loads(data)
 
     # user is an "Associate array in PHP" or like a "Map" in Java or Dart
@@ -26,6 +26,7 @@ async def addData(request):
     })
     print("Data inserted")
     return JSONResponse({'result': True})
+
 
 
 #   =========================================================
@@ -41,6 +42,21 @@ async def fetchUsers(request):
     return JSONResponse(l)
 
 
+
+#   =========================================================
+#   Delete User based on user_id (_id)
+async def deleteUser(request):
+    user_id = (await request.body()).decode()
+    print("Deleteing user ", user_id)
+    query = {"_id": user_id}
+
+    request.state.db.users.delete_one(query)
+    print("Delete successfull")
+
+    return JSONResponse({"result": True})
+
+
+
 #   =========================================================
 #   Check if the id in paramter is unique
 async def checkIdAvailablility(request):
@@ -53,7 +69,8 @@ routes = [
     Route('/add', addData, methods=["GET", "POST"]),
     Route('/check-availability', checkIdAvailablility,
           methods=["GET", "POST"]),
-    Route('/get-users', fetchUsers, methods=["GET", "POST"])
+    Route('/get-users', fetchUsers, methods=["GET", "POST"]),
+    Route('/delete-user', deleteUser, methods=["GET", "POST"])
 ]
 
 app = Starlette(debug=True, routes=routes, middleware=middleware)

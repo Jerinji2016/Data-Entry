@@ -1,6 +1,5 @@
 <div class="card-xl row mx-auto my-3 bg-dark text-center text-white align-items-center container rounded-lg">
-    <img src={{@user.imgUrl}} alt="dp" class="rounded-circle col-sm-4 p-3">
-
+    <img src={{@user.image}} alt="dp" class="rounded-circle col-sm-4 p-3" style="height: 300px">
     <div class="col-sm-7 p-0">
         <table class="table table-striped text-white m-0">
             <thead>
@@ -33,6 +32,6 @@
         </table>
     </div>
     <div class="col-sm-1 p-2">
-        <button class="btn btn-danger">Delete</button>
+        <button class="btn btn-danger" {{action "delete"}}>Delete</button>
     </div>
 </div>

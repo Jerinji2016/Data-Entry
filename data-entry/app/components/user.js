@@ -1,7 +1,12 @@
 import Component from '@glimmer/component';
+import { action } from "@ember/object";
+
 
 export default class UserComponent extends Component {
-    get imgUrl() { 
-        return 'https://www.w3schools.com/bootstrap4/img_avatar3.png'; 
+
+    @action
+    delete() {
+        var { del } = this.args;
+        del();
     }
 }

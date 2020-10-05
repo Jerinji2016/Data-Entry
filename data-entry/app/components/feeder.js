@@ -2,7 +2,7 @@ import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 
-const DB_URL = "http://127.0.0.1:8000/";
+const DB_URL = "http://127.0.0.1:8000";
 
 export default class FeederComponent extends Component {
     @tracked id = '';
@@ -38,7 +38,7 @@ export default class FeederComponent extends Component {
         };
 
         var xhr = new XMLHttpRequest();
-        var url = DB_URL + "add";
+        var url = DB_URL + "/add";
         console.log(url);
 
         xhr.open("POST", url, true);
@@ -67,7 +67,7 @@ export default class FeederComponent extends Component {
             }
         }
 
-        xhr.send("user=" + JSON.stringify(user));
+        xhr.send(JSON.stringify(user));
     }
 
     checkFieldError() {
@@ -98,7 +98,7 @@ export default class FeederComponent extends Component {
 
     @action checkValidId() {
         let xhr = new XMLHttpRequest();
-        var url = DB_URL + "check-availability";
+        var url = DB_URL + "/check-availability";
 
         xhr.open("POST", url, true);
         xhr.onreadystatechange = function () {

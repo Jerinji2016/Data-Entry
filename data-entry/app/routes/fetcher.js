@@ -1,24 +1,22 @@
 import Route from '@ember/routing/route';
+import { action } from '@ember/object'
 import { tracked } from '@glimmer/tracking';
 
-const DB_URL = "http://127.0.0.1:8000/";
+const DB_URL = "http://127.0.0.1:8000";
 
-export default class FetcherRoute extends Route {
-    @tracked isLoaded = false;
-    @tracked users;
+export default Ember.Route.extend({
+    model: async function (params) {
+        this.fetchData()
+    },
 
-    async model() {
-        let xhr = new XMLHttpRequest();
-        xhr.open('GET', DB_URL + "get-users", true);
+    actions: {
+        deleteUser: function (user_id) {
+            console.log("in Route");
+            console.log(user_id);
+        }   
+    },
 
-        console.log(this.isLoaded);
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                this.users = JSON.parse(xhr.response);
-                console.log(this.users);
-                this.isLoaded = true;
-            }
-        }
-        xhr.send();
+    fetchData() {
+        this.controllerFor('fetcher').send('fetchData');
     }
-}
+});
