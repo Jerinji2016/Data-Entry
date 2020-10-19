@@ -13,12 +13,21 @@ Run the flutter project in an emulator or physical device
 
 
 # Screenshots
-
+# Mobile
 DashBoard            |  Add Data         |  Fetch Data
 :-------------------------:|:-------------------------:|:-------------------------:
-![Screenshot](/screenshots/m1.png?raw=true "Mobile ss-1")  | ![Screenshot](/screenshots/m2.png?raw=true "Mobile ss-2") | ![Screenshot](/screenshots/m3.png?raw=true "Mobile ss-2")
+![Screenshot](/screenshots/m1.png?raw=true "Mobile ss-1")  | ![Screenshot](/screenshots/m2.png?raw=true "Mobile ss-2") | ![Screenshot](/screenshots/m3.png?raw=true "Mobile ss-3")
 
-DashBoard            |  Add Data         |  Fetch Data
-:-------------------------:|:-------------------------:|:-------------------------:
-![Screenshot](/screenshots/w1.png?raw=true "Mobile ss-1")  | ![Screenshot](/screenshots/w2.png?raw=true "Mobile ss-2") | ![Screenshot](/screenshots/w3.png?raw=true "Mobile ss-2") 
+# Web
+DashBoard
+![Screenshot](/screenshots/w1.png?raw=true "Mobile ss-1")  
 
+Add Data
+![Screenshot](/screenshots/w2.png?raw=true "Mobile ss-2")
+
+Fetch all added Data
+![Screenshot](/screenshots/w3.png?raw=true "Mobile ss-3") 
+
+
+# Note:
+Mongo DB url in the starlette code muct be changed as to carry out the databse operations
