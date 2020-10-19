@@ -16,5 +16,4 @@ Run the flutter project in an emulator or physical device
 
 Solarized dark             |  Solarized Ocean         |  Solarized Ocean
 :-------------------------:|:-------------------------:|:-------------------------:
-![](/screenshots/m1.png?raw=true "Mobile ss-1")  | ![](/screenshots/m2.png?raw=true "Mobile ss-2") 
-| ![](/screenshots/m2.png?raw=true "Mobile ss-2") 
+![Screenshot](/screenshots/m1.png?raw=true "Mobile ss-1")  | ![Screenshot](/screenshots/m2.png?raw=true "Mobile ss-2") | ![Screenshot](/screenshots/m2.png?raw=true "Mobile ss-2") 
