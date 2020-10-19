@@ -14,6 +14,11 @@ Run the flutter project in an emulator or physical device
 
 # Screenshots
 
-Solarized dark             |  Solarized Ocean         |  Solarized Ocean
+DashBoard            |  Add Data         |  Fetch Data
 :-------------------------:|:-------------------------:|:-------------------------:
-![Screenshot](/screenshots/m1.png?raw=true "Mobile ss-1")  | ![Screenshot](/screenshots/m2.png?raw=true "Mobile ss-2") | ![Screenshot](/screenshots/m2.png?raw=true "Mobile ss-2") 
+![Screenshot](/screenshots/m1.png?raw=true "Mobile ss-1")  | ![Screenshot](/screenshots/m2.png?raw=true "Mobile ss-2") | ![Screenshot](/screenshots/m3.png?raw=true "Mobile ss-2")
+
+DashBoard            |  Add Data         |  Fetch Data
+:-------------------------:|:-------------------------:|:-------------------------:
+![Screenshot](/screenshots/w1.png?raw=true "Mobile ss-1")  | ![Screenshot](/screenshots/w2.png?raw=true "Mobile ss-2") | ![Screenshot](/screenshots/w3.png?raw=true "Mobile ss-2") 
+
