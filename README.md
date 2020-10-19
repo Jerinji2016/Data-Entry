@@ -4,4 +4,13 @@ This is a simple Data Entry system where you can enter a few details and it will
 This is just to show the simple CRUD system using Ember, Starlette and Flutter
 
 # How to Run
-Start starlette server with `uvicorn app:app`
+Start starlette server with `uvicorn app:app` in data-entry-server
+
+Start Ember server in data-entry folder using `ember s`
+
+Run the flutter project in an emulator or physical device
+`flutter run`
+
+
+# Screenshots
+![Alt text](/screenshots/m1.png?raw=true "Optional Title")
