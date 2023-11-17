@@ -66,11 +66,11 @@ async def checkIdAvailablility(request):
 
 
 routes = [
-    Route('/add', addData, methods=["GET", "POST"]),
+    Route('/add', addData, methods=["POST"]),
     Route('/check-availability', checkIdAvailablility,
-          methods=["GET", "POST"]),
-    Route('/get-users', fetchUsers, methods=["GET", "POST"]),
-    Route('/delete-user', deleteUser, methods=["GET", "POST"])
+          methods=["POST"]),
+    Route('/get-users', fetchUsers, methods=["GET"]),
+    Route('/delete-user', deleteUser, methods=["POST"])
 ]
 
 app = Starlette(debug=True, routes=routes, middleware=middleware)
